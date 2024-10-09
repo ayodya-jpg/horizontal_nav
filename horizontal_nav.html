@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal_nav</title>
+    <style>
+        ul{
+            list-style-type: none;
+            display: flex;
+           
+        }
+        .top {
+            margin:0;
+            padding: 8px;
+            margin-top: 0px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        .top a {
+            position: relative;
+            padding: 18px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            background-color: lightgrey;
+            text-align: center;
+            /* font-weight: bold; */
+            
+
+        }
+
+        .top a.active {
+            background-color: #40B2B9;
+            color: white;
+            
+        }
+
+        .top a:hover {
+            background-color:#333;
+            color: white;
+        }
+
+        .top a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 4px;
+            background-color: lightgrey;
+
+        }
+
+        .top a:hover::after {
+            left: 0;
+            width: 100%;
+            background-color: #40B2B9;
+        }
+
+        .top a.active::after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="top">
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">PROJECT</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
